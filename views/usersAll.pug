@@ -1,0 +1,27 @@
+extends loginBase
+
+block layout
+    script(src='/allUsers.js')
+    script(src='/allUsersEventListener.js')
+
+    input(type="button"
+        id="signOut"
+        value="Sign out")
+
+    br
+
+    h1.Title="MovieZilla - Welcome " + username
+
+    div.hiddenContainer
+    div.allUsersContainer
+        h5.Title Users List
+
+        table.all-users-table
+            thead
+                tr
+                    th Username
+                    th Created Date
+                    th Last Login Time
+                    th Enabled
+                    th Action
+            tbody.all-users-body

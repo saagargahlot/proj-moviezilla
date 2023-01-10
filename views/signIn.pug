@@ -1,0 +1,28 @@
+extends loginBase
+
+block layout
+    script(src='/signInEventListener.js')
+
+    h1.Title MovieZilla
+    div.container
+        input#username(type='text'
+            autofocus=true
+            placeholder='Username'
+            name='username'
+            required)
+
+        input#password(
+            placeholder='Password'
+            type='password'
+            name='password'
+            required)
+
+        input#signIn(type='submit'
+            value='Sign in')
+
+        ul#error
+
+        div#dividerOne
+
+        input#createNewAccount(type='button'
+            value='Create new account')

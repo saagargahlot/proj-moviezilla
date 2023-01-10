@@ -1,0 +1,337 @@
+body {
+    font-family: times, serif, sans-serif;
+    background: #e7e0e0;
+}
+
+h1 {
+    text-align: center;
+    color: dodgerblue;
+}
+
+h4 {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    color: dodgerblue;
+    font-family: "Comic Sans MS", serif;
+    font-size: large;
+    padding: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#signIn {
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    color: white;
+    /* width: 25%; */
+    padding: 4px 56px;
+}
+
+#signInButton {
+    margin: auto;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+#signOut {
+    margin: auto;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+#signUp {
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    color: white;
+    /* width: 25%; */
+    padding: 4px 52px;
+}
+
+/* adding distance from text field to buttons */
+#username {
+    border: 1px solid black;
+    margin-bottom: 5px;
+    padding: 4px 5px;
+    border-radius: 4px;
+    /* width: 25%; */
+
+}
+
+#password {
+    border: 1px solid black;
+    margin-bottom: 5px;
+    padding: 4px 5px;
+    border-radius: 4px;
+    /* width: 25%; */
+}
+
+#reEnterPassword {
+    border: 1px solid black;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding: 4px 5px;
+    border-radius: 4px;
+    /* width: 25%; */
+}
+
+#dividerOne {
+    border-bottom: 1px solid black;
+    width: 153px;
+    margin-top: 10px;
+}
+
+#dividerTwo {
+    border-bottom: 1px solid black;
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#createNewAccount {
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: white;
+    /* width: 25%; */
+    padding: 4px 17px;
+}
+
+.container {
+    width: 150px;
+    height: auto;
+    padding: 25px 25px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+.movieContainer {
+    width: 80%;
+    height: auto;
+    padding: 25px 25px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    overflow-x:auto;
+    text-align: center;
+}
+
+.movieListContainer {
+    width: 80%;
+    height: 300px;
+    padding: 25px 25px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    overflow-x:auto;
+    overflow-y: auto;
+    visibility: collapse;
+}
+
+.allUsersContainer {
+    width: 80%;
+    height: 600px;
+    padding: 25px 25px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    overflow-x:auto;
+    overflow-y: auto;
+}
+
+.hiddenContainer {
+    width: 80%;
+    margin: auto;
+    height: 2px;
+    visibility: hidden;
+}
+
+.movieSearchResultContainer {
+    width: 80%;
+    padding: 25px 25px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    height: 300px;
+    visibility: collapse;
+    overflow-x:auto;
+    overflow-y: auto;
+}
+
+/* #searchMovie {
+    font-size: 12px;
+    margin-left: 2px;
+    margin-right: 5px;
+    width: 50%;
+} */
+
+#searchMovie {
+    margin-right: 5px;
+    border: 1px solid black;
+    width: 400px;
+    height: 20px;
+    border-radius: 4px;
+    /*text-align: center;*/
+    font-size: 12px;
+    /*padding-right: 5px;*/
+}
+
+#search {
+    /*margin: auto;*/
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/*#search {*/
+/*    border: 1px solid black;*/
+/*    width: 250px;*/
+/*    height: 20px;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+.movies {
+    font-size: 10px;
+    margin-top: 10px;
+    border-width: 2px;
+    /*margin-left: 2px;*/
+    /*margin-right: 5px;*/
+    visibility: hidden;
+    /*height: 150px;*/
+    overflow: auto;
+}
+
+.fav-movies-title-table {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.movies-table, .fav-movies-table {
+    font-size: 10px;
+    /*margin-top: 1px;*/
+    border-collapse: collapse;  /* remove cell padding */
+    /*border: 1px solid crimson;*/
+    margin: auto;
+}
+
+.all-users-table {
+    font-size: 15px;
+    border-collapse: collapse;  /* remove cell padding */
+    margin: auto;
+
+    /*border: 1px solid crimson;*/
+}
+
+.all-users-table th {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+}
+
+.all-users-table td {
+    padding: 15px;
+}
+
+.movie-row {
+    border: none;
+    /*border: dashed;*/
+    /*border: #b3d7ff;*/
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+}
+
+.fav-movies-title-thead {
+    background-color: #bee5eb;
+    color: red;
+}
+
+tr:nth-child(even) {
+    background-color: #bee5eb;
+}
+
+td {
+    padding: 5px;
+}
+
+.movie-details {
+    position: absolute;
+    top: 0;
+    transform: scale(0) translate(-70%, -20%);
+    transition: transform 0.1s ease-in-out;
+    transform-origin: left;
+    display: inline;
+    background: #b3d7ff;
+    z-index: 10;
+    min-width: 100%;
+    padding: 1rem;
+    border: 1px blue outset;
+    border-radius: 25px;
+    box-shadow: 5px 10px #888888;
+}
+
+[id^="fav-overview-"] {
+    position: relative;
+}
+
+[id^="fav-overview-"]:hover span {
+    transform: scale(1) translate(-70%, -20%);
+}
+
+
+/* https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
+.movie-thumbnail {
+    padding: 2px;
+    transition: transform .2s;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.movie-thumbnail:hover {
+    transform: scale(3);
+}
+
+/* Adding cursor pointer for add and delete buttons by using what their id starts with */
+[id^="fav-delete-btn-"], [id^="fav-add-btn-"], [id^="enable-disable-btn-"] {
+    cursor: pointer;
+}
+
+#error {
+    font-family: 'Roboto', sans-serif;
+    font-size: x-small;
+    padding-left: 0;  /* no indentation */
+    visibility: collapse;
+    color: red;
+}

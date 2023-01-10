@@ -1,0 +1,38 @@
+extends loginBase
+
+block layout
+    script(src='/signUpEventListener.js')
+    h1.Title MovieZilla
+    div.container
+
+        h2.Title Sign Up 
+
+        div#dividerTwo
+
+        label(for="username") Username
+        input#username(type='text'
+            autofocus='true' 
+            name='username'
+            required)
+
+        label(for="password") Password 
+        input#password(
+            placeholder='at least 8 characters'
+            type='password'
+            name='password'
+            minlength='8'
+            maxlength='20'
+            required)
+
+        label(for="reEnterPassword") Re-enter password 
+        input#reEnterPassword(
+            type='password'
+            name='confirmPassword'
+            minlength='8'
+            maxlength='20'
+            required)
+
+        input#signUp(type='submit'
+            value='Sign Up')
+
+        ul#error

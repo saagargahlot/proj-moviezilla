@@ -1,0 +1,15 @@
+extends loginBase
+
+block layout
+    script(src='/errorPageEventListener.js')
+
+    input(type="button"
+        id="signInButton"
+        value="Sign in")
+
+    br
+
+    h1.Title="MovieZilla"
+
+    div.container
+        h4.Title= errorMessage

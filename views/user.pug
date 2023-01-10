@@ -1,0 +1,53 @@
+extends loginBase
+
+block layout
+    script(src='/userMovies.js')
+    script(src='/userMoviesEventListener.js')
+
+    input(type="button"
+        id="signOut"
+        value="Sign out")
+
+    br
+
+    h1.Title="MovieZilla - Welcome " + username
+
+    div.movieContainer
+        input#searchMovie(
+            type="text"
+            autofocus=true
+            name="Search"
+            placeholder="Search for a movie"
+            required)
+
+        button#search(type="submit") Search
+
+        ul#error
+
+    div.hiddenContainer
+    div.movieListContainer
+        h5.Title Favorites
+
+        table.fav-movies-table
+            thead
+                tr
+                    th Title
+                    th Language
+                    th Release Date
+                    th Overview
+                    th Poster
+                    th
+            tbody.fav-movies-body
+
+    div.hiddenContainer
+    div.movieSearchResultContainer
+        table.movies-table
+            thead
+                tr
+                    th Title
+                    th Language
+                    th Release Date
+                    th Overview
+                    th Poster
+                    th
+            tbody.movies-body
