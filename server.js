@@ -307,26 +307,35 @@ app.get('/movies/:title/:limit/:user/:key', (req, res) => {
                             .then(data => {
                                 let movies = []
 
-                                // add the movies to the list
-                                data.results.forEach( (movie, index) => {
-                                    if (index < searchResultsLimit) {
-                                        const movieObj = {title: movie.original_title,
-                                            id: movie.id,
-                                            language: movie.original_language,
-                                            releaseDate: movie.release_date,
-                                            overview: movie.overview,
-                                            posterPath: movie.poster_path};
+                                // Check if data and results exist
+                                if (data && data.results && Array.isArray(data.results)) {
+                                    // add the movies to the list
+                                    data.results.forEach( (movie, index) => {
+                                        if (index < searchResultsLimit) {
+                                            const movieObj = {title: movie.original_title,
+                                                id: movie.id,
+                                                language: movie.original_language,
+                                                releaseDate: movie.release_date,
+                                                overview: movie.overview,
+                                                posterPath: movie.poster_path};
 
-                                        movies.push(movieObj)
-                                        console.log(`Added movie: ${movieObj.title}...`)
-                                    }
-                                })
+                                            movies.push(movieObj)
+                                            console.log(`Added movie: ${movieObj.title}...`)
+                                        }
+                                    })
+                                } else {
+                                    console.error('API Error: Invalid response structure', data)
+                                }
 
                                 return movies
                             })
                             .then(movies => {
                                 console.log(`Trying to return the result by rendering movies...`)
                                 res.status(statusOk).json(movies)
+                            })
+                            .catch(error => {
+                                console.error('Movie search error:', error)
+                                res.status(statusBadRequest).json({message: 'Error searching for movies. Please check your API key.'})
                             })
                     }
 
